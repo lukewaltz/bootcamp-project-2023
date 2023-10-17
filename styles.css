@@ -1,0 +1,353 @@
+html {
+    height: 100%;
+  }
+
+body {
+    background-color: lightcyan;
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+h1, h2, h3, h4, p {
+    color: darkslateblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.about, .project, .blog-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    width: 800px;
+}
+
+.project{
+    width: 750px;
+}
+
+.resume{
+    width: 70%;
+}
+
+.entry-title{
+    margin-left: 10px;
+}
+
+.entry-info{
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.blog-image-set{
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    height: fit-content;
+    padding-top: 25px;
+    margin: 20px, 20px;
+}
+.blog-image{
+    width: 300px;
+    padding: 10px, 10px, 10px, 10px;
+    border-radius: 10px;
+}
+
+.project-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-name {
+    width: 100%;
+    height: 50px;
+    padding-top: 20px;
+    background-color: darkslateblue;
+    color: lightblue;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+}
+
+.blog-entry{
+    width: 950px;
+    border-radius: 15px;
+    background-color: lightblue;
+}
+
+.blog-caption{
+    width: 850px;
+}
+
+.about-text{
+    text-align: center;
+    font-size: larger;
+}
+
+.about-image img{
+    max-width: 300px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.project img{
+    max-width: 100%;
+    border-radius: 10px;
+    border-style:solid;
+    border-width: 10px;
+    border-color: darkslateblue;
+}
+
+.skill-list{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+}
+
+.skill-list li{
+    padding: 10px;
+}
+
+li {
+    color: darkslateblue;
+}
+
+
+/* Nav Bar */
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  
+    background-color: lightblue;
+    color: darkslateblue;
+    padding: 0px 0px;
+}
+
+/* CSS for Contact Me */
+
+.mail-list{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-around;
+}
+.contact-header{
+    text-align: center;
+}
+
+.mail-list li{
+    list-style: disc;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.media-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.media-button a img{
+    height: 50px;
+}
+
+/* CSS for nav styling */
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    list-style: none;    
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
+
+
+  /* CSS for page footer */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    color: darkslateblue;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+
+.nav-button{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 30px;
+    width: fit-content;
+    margin: 0px 15px;
+    border-radius: 4px;
+    font-size: large;
+    text-align: center;
+}
+
+.logo{
+    padding-left: 20px;
+}
+
+.nav-list a{
+    margin: 0px, 12px;
+}
+
+.nav-button:hover{
+    background-color: white;
+}
+
+/* all LINK states formatting */
+
+a:link {
+    color: darkslateblue;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+a:visited {
+    color: darkslateblue;
+}
+a:active, a:hover {
+    color: darkslategray;
+}
+input:focus {
+    border: 1px solid #aaa;
+}
+
+/* CSS for button class */
+
+.button{
+    position: sticky;
+    background-color: darkslateblue;
+    padding: 5px, 7px;
+    border-radius: 8px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.button a{
+    color: lightblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button:hover{
+    width: 210px;
+}
+
+/* styling for the timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* actual timeLINE */
+.timeline::after {
+    content: ' ';
+    position: absolute;
+    width: 6px;
+    background-color: darkslateblue;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color:lightcyan;
+    width: 70%;
+}
+
+.right {
+    left: 10%
+}
+
+/* circles on timeline */
+.container::after {
+    content: ' ';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -17px;
+    background-color: darkslateblue;
+    border: 4px solid lightblue;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* arrows on containers */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* circle alignment */
+.right::after {
+    left: -16px
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
