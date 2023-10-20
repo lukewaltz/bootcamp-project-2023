@@ -10,16 +10,16 @@ export type Blog = {
 //initialize list of blogs
 const blogs: Blog[] = [
     {
-        title: 'Lukes Blog 1',
-        date: '10/18/2023',
-        description: 'Description',
-        slug: 'blog-entry1',
+        title: 'Weekend Visit',
+        date: '10/1/2023',
+        description: 'This weekend my dad flew out from Denver to come visit me for the weekend...',
+        slug: './blog_pages/blog1',
     },
     {
-        title: 'Lukes Blog 2',
+        title: 'Croatia',
         date: '10/18/2023',
-        description: 'Description',
-        slug: 'blog-entry2'
+        description: 'This summer I went to Croatia with my mom and sister for eight days...',
+        slug: './blog_pages/blog2'
     }
 ];
 
@@ -36,9 +36,14 @@ export function renderBlogs(blogs: Blog[]){
 
             //set content of new element
             blogElement.innerHTML = `
-                <h2>${blog.title}</h2>
-                <h3>${blog.date}</h3>
-                <p>${blog.description}</p>
+            <a href="${blog.slug}.html">
+                <div>
+                    <p><br /></p>
+                    <h2>${blog.title}</h2>
+                    <h3>${blog.date}</h3>
+                    <p>${blog.description}</p>
+                </div>
+            </a>
             `;
 
             //append the new element to the container div

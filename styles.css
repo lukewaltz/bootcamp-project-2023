@@ -90,7 +90,18 @@ h1, h2, h3, h4, p {
     width: 950px;
     border-radius: 15px;
     background-color: lightblue;
+    text-align: center;
 }
+
+/* blog items from newblog.js */
+.blog div{
+    width: 850px;
+    height: 200px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: lightblue;
+}
+
 
 .blog-caption{
     width: 850px;
