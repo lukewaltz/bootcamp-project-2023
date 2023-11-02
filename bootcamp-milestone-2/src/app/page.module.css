@@ -1,0 +1,49 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home main {
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+
+.home h1, .home h2, .home h3, .home h4, .home p {
+    color: darkslateblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .home body {
+    background-color: lightcyan;
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .home h1 {
+    color: darkslateblue;
+    font-size: 28px;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+  }
+
+  .home div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home img{
+    max-width: 300px;
+    border-radius: 20px;
+    align-self: center;
+    margin-bottom: 3vh;
+  }
