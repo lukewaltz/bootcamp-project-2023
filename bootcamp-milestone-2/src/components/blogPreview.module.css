@@ -1,0 +1,37 @@
+/* .blog-image{
+    width: 300px;
+    padding: 10px, 10px, 10px, 10px;
+    border-radius: 10px;
+  }
+
+  .button-row{
+    display: flex;
+    justify-content: center;
+  } */
+
+  /* blogPreview.module.css */
+
+.div {
+    /* background-color: lightblue; */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .h3 {
+    color: darkslateblue;
+    font-size: 1.5rem;
+  }
+  
+  .image {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .p {
+    color: darkslateblue;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  

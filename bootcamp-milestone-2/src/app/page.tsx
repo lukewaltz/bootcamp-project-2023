@@ -1,17 +1,9 @@
 import blogs from "./blogData"
-import BlogPreview from "@/components/recipePreview"
+import BlogPreview from "@/components/blogPreview"
 import style from "./page.module.css"
+import Link from "next/link"
 
-{blogs.map(blog => 
-  // recipe preview
-    <BlogPreview 
-    name={blog.name}
-    posted={blog.date}
-    image={blog.image}
-    description={blog.description}
-    text={blog.text}
-    />
-  )}
+
 
 export default function Home() {
 
@@ -19,7 +11,7 @@ export default function Home() {
 
     <header className={style.home} >
     <main>
-      <h1 className="page-title">About Me</h1>
+      <h1 className="page-title">Luke Waltz</h1>
         <div className="about">
           <div className="about-image">
             <img src="../cropped headshot.jpeg" alt="Headshot" />
@@ -45,8 +37,13 @@ export default function Home() {
               developer. Welcome to my website!
             </p>
           </div>
-        </div>
-      <div></div>
+      </div>
+      
+      <Link href="/blog"><div>{blogs.map(blog => 
+        // recipe preview
+          <BlogPreview {...blog}/>
+        )}</div></Link>
+        
     </main>
     </header>
   )
