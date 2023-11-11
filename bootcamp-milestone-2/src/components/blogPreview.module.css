@@ -1,15 +1,3 @@
-/* .blog-image{
-    width: 300px;
-    padding: 10px, 10px, 10px, 10px;
-    border-radius: 10px;
-  }
-
-  .button-row{
-    display: flex;
-    justify-content: center;
-  } */
-
-  /* blogPreview.module.css */
 
 .div {
     /* background-color: lightblue; */
@@ -24,8 +12,7 @@
     font-size: 1.5rem;
   }
   
-  .image {
-    max-width: 100%;
+  .div image {
     border-radius: 5px;
   }
   
@@ -33,5 +20,14 @@
     color: darkslateblue;
     margin-top: 10px;
     font-size: 1rem;
+  }
+
+  .div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
   }
   

@@ -2,19 +2,18 @@ import blogs from "./blogData"
 import BlogPreview from "@/components/blogPreview"
 import style from "./page.module.css"
 import Link from "next/link"
-
-
+import Image from "next/image"
 
 export default function Home() {
 
   return (
-
+    
     <header className={style.home} >
     <main>
       <h1 className="page-title">Luke Waltz</h1>
         <div className="about">
           <div className="about-image">
-            <img src="../cropped headshot.jpeg" alt="Headshot" />
+            <Image src="/cropped headshot.jpeg" width={300} height={200} alt="Headshot" />
           </div>
           <div className="about-text">
             <p>
@@ -40,7 +39,6 @@ export default function Home() {
       </div>
       
       <Link href="/blog"><div>{blogs.map(blog => 
-        // recipe preview
           <BlogPreview {...blog}/>
         )}</div></Link>
         

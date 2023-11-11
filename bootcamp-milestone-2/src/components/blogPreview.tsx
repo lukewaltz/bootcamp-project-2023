@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './blogPreview.module.css'
 import blogs, { Blog } from '@/app/blogData';
+import Image from 'next/image';
 
 export default function BlogPreview(props: Blog) {
   return (
@@ -9,7 +10,7 @@ export default function BlogPreview(props: Blog) {
 <div className={style.div}>
   <h3 className={style.h3}>{props.name}</h3>
   <div>
-    <img src={props.image} alt={props.name} className={style.image} />
+    <Image src={props.image} alt={props.name} className={style.image} width={300} height={300} />
     <p>{props.description}</p>
     <p className={style.p}>Posted on {props.date}</p>
     {/* <p className={style.p}>{props.text}</p> */}
