@@ -7,10 +7,9 @@ export default function ProjectComponent(props: ProjectData) {
   console.log("PROPS: ", props);
   return (
 <div className={style.div}>
-  <h3 className={style.h3}>{props.name}</h3>
+  <h3 className={style.h3}>{props.name} | {props.date}</h3>
   <div>
     <Image src={props.image} alt={props.name} className={style.image} width={300} height={300} />
-    <p className={style.p}>Posted on {props.date}</p>
     <p className={style.p}>{props.content}</p>
   </div>
 </div>
