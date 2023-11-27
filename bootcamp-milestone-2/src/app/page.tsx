@@ -3,8 +3,26 @@ import BlogPreview from "@/components/blogPreview"
 import style from "./page.module.css"
 import Link from "next/link"
 import Image from "next/image"
+import Blog from '@/database/blogSchema';
+import connectDB from '@/helpers/db';
 
-export default function Home() {
+async function getBlogs(){
+	await connectDB() // function from db.ts before
+
+	try {
+			// query for all blogs and sort by date
+	    const blogs = await Blog.find({}).lean().sort({ date: -1 }).orFail()
+			// send a response as the blogs as the message
+	    return blogs
+	} catch (err) {
+    console.error("error getting data from DB ", err);
+	    return null
+	}
+}
+
+export default async function Home() {
+  const blogData = await getBlogs();
+  (blogData ? console.log(blogData[0]) : null);
 
   return (
     
@@ -27,20 +45,26 @@ export default function Home() {
               teacher introduced me to <em>Scratch.mit</em>, where I made a
               bootleg Space Invaders game using copyrighted Star Wars avatars.
               From there, my passion and knowledge only grew. I applied to
-              CalPoly's Computer Engineering program, but by my sophomore year I
+              CalPolys Computer Engineering program, but by my sophomore year I
               discovered I have no such passion for Electrical Engineering, and
               that I only wanted to pursue software. I have since changed my
-              major to Computer Science, made Dean's List honors three quarters
+              major to Computer Science, made Deans List honors three quarters
               in a row, and secured my first internship at OpenPark, a small
               startup out of LA, and joined Hack4Impact Cal Poly as a software
               developer. Welcome to my website!
             </p>
           </div>
       </div>
-      
-      <Link href="/blog"><div>{blogs.map(blog => 
-          <BlogPreview {...blog}/>
-        )}</div></Link>
+          {blogData ? blogData.map((blog) => (
+             <div key={blog._id}>
+               <Link 
+               href={"/blog/" + blog.slug}
+               >
+              <BlogPreview {...blog}/>
+               </Link>
+
+             </div>
+          )) : null}
         
     </main>
     </header>

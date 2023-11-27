@@ -31,7 +31,9 @@ export default function Contact() {
               <a href="https://github.com/lukewaltz" className="media-link">
                 <Image
                   className="media-image"
-                  src="../GitHub-Symbol.png"
+                  src="/GitHub-Symbol.png"
+                  width={100}
+                  height={100}
                   alt="Github logo"
                 />
               </a>
@@ -41,7 +43,9 @@ export default function Contact() {
               >
                 <Image
                   className="media-image"
-                  src="../linkedin_img.png"
+                  src="/linkedin_img.png"
+                  width={100}
+                  height={100}
                   alt="linkedin logo"
                 />
               </a>
@@ -51,7 +55,9 @@ export default function Contact() {
               >
                 <Image
                   className="media-image"
-                  src="../facebook_img.png"
+                  src="/facebook_img.png"
+                  width={100}
+                  height={100}
                   alt="facebook logo"
                 />
               </a>
