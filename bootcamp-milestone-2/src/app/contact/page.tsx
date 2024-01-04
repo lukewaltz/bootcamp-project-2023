@@ -1,15 +1,116 @@
+"use client"
 import React from "react"
 import style from "./contact.module.css"
 import Image from "next/image"
-
+import { useState, useRef } from "react"
+import emailjs from "@emailjs/browser"
 
 export default function Contact() {
-    return (
 
-      <header className={style.contact}>
+  // usestate hooks for form input
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-<h1 className="page-title">Contact Me</h1>
+  // hooks for validity checking
+  const [isValid, setIsValid] = useState(true);
+
+  // hook for send success
+  const [sent, setSent] = useState(false);
+
+  const form = useRef<HTMLFormElement>(null);
+
+  // email with emailJS
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: name,
+      reply_to: email, 
+      message: message,
+    };
+
+    emailjs
+    .send(
+      "contact_service",
+      "contact_form",
+      templateParams,
+      "D0Im7go2ggmwJxEZV"
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+
+        setName("");
+        setEmail("");
+        setMessage("");
+        setIsValid(true);
+        setSent(true);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
+
+  const handleInvalid = (e: any) => {
+    e.preventDefault();
+    setIsValid(false);
+    setSent(false);
+  };
+
+  return (
+    <header className={style.contact}>
+    <h1 className="page-title">Contact Me</h1>
       <div className="contact-list">
+        <div className="emailJS-input">
+        <form className="contactForm" ref={form} onSubmit={sendEmail} onInvalid={handleInvalid}>
+        <p>
+          <label className="formLabel" htmlFor="name">Name</label>
+          <input
+            className="textInput"
+            type="text"
+            id="name"
+            name="name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </p>
+        <p>
+          <label className="formLabel" htmlFor="email">Email</label>
+          <input
+            className="textInput"
+            type="email"
+            id="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </p>
+        <p>
+          <label className="formLabel" htmlFor="message">Message</label>
+          <textarea
+            className="textInput"
+            id="message"
+            name="message"
+            required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+        </p>
+        {/* Display error message when form is invalid */}
+        {!isValid && (
+          <p style={{ color: "red" }}>All fields must be filled out properly.</p>
+        )}
+        {/* Display success message when email has been sent */}
+        {sent && (
+          <p style={{ color: "black" }}>Email has been sent!</p>
+        )}
+        <input className="buttonInput" type="submit" value="Send" />
+        </form>
+        </div>
+
         <div className="mailto">
           <h3 className="contact-header">Email</h3>
           <ul className="mail-list">

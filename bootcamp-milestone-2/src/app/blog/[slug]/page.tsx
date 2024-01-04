@@ -25,7 +25,7 @@ async function getBlog(slug: string) {
       return null;
   }
   
-  export default async function Blog({ params: { slug } }: Props) {
+export default async function Blog({ params: { slug } }: Props) {
       const blog = await getBlog(slug);
   
       if (blog) 

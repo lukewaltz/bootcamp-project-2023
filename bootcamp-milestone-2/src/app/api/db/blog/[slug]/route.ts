@@ -22,4 +22,28 @@ export async function GET(req: NextRequest, { params }: IParams) {
         return NextResponse.json({ error: 'Blog not found.' }, { status: 404 });
     }
 }
+
+export async function POST(req: NextRequest, { params }: IParams) {
+    await connectDB();
+
+    const comment = await req.json();
+
+    // input validation
+    if (!comment) {
+        return NextResponse.json("No Body in JSON Req", {status: 400});
+    }
+    const BlogSlug = {slug: params.slug};
+
+    // post comment body
+    try {
+        const blog = await blogSchema.findOneAndUpdate(BlogSlug, {
+            $push: {
+                comments: comment,
+            },
+        });
+        return NextResponse.json(blog);
+    } catch (err) {
+        return NextResponse.json("Blog not found.", { status: 404 });
+    }
+}
 	  
