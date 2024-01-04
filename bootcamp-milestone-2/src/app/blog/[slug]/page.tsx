@@ -2,6 +2,8 @@ import React from "react";
 import style from "../../../components/blogComponent.module.css";
 import Image from "next/image";
 import BlogComponent from "@/components/blogComponent";
+import Comment from "@/components/commentComponent";
+import { IComment } from "@/database/blogSchema";
 
 
 type Props = {
@@ -37,7 +39,13 @@ async function getBlog(slug: string) {
               image={blog.image}
               description={blog.description}
               text={blog.text}
+              comments={blog.comments}
             />
+            <div className="comments">
+              {blog.comments.map((comment: IComment, index: number) => (
+                <Comment key={index} comment={comment} />
+              ))}
+            </div>
           </div>
         );
       } else {

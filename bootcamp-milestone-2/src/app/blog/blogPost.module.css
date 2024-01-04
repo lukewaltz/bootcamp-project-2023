@@ -1,60 +1,37 @@
-/* blogPost.module.css */
+/* blogComponent.module.css */
 
-.blogPost{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.div {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Added background color for better contrast */
 }
 
-.blogPost h1 {
-    margin-top: 2vh;
-    font-size: 24px;
-    color: darkslateblue;
-  }
-  
-  .blogPost {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .blogPost div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
+.h3 {
+  color: darkslateblue;
+  font-size: 1.8rem; /* Increased font size for title */
+  margin-bottom: 15px; /* Improved spacing between elements */
+}
 
-  .blogPost div div {
-    display: flex;
-    flex-direction: column;
-  }
+.image {
+  border-radius: 8px;
+  margin-right: 20px; /* Added margin to separate image from text */
+}
 
-  .blogPost div div div{
-    display: flex;
-    flex-direction: row;
-  }
+.p {
+  color: #555; /* Adjusted text color for better readability */
+  font-size: 1rem; /* Adjusted font size for text */
+  line-height: 1.5; /* Improved line height for better readability */
+}
 
-  .blogPost div div img{
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-  }
+.colFlex {
+  display: flex;
+  flex-direction: column;
+}
 
-  .blogPost p, .blogPost h3{
-    color: darkslateblue;
-  }
-
-  .colFlex{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .rowFlex{
-    display: flex;
-    flex-direction: row;
-  }
-  
+.rowFlex {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Centered items in the row */
+}

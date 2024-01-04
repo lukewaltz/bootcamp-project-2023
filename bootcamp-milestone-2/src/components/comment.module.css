@@ -1,0 +1,26 @@
+/* comment.module.css */
+
+.blogComment {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Adjusted background color for better contrast */
+  }
+  
+  .blogComment h4 {
+    color: darkslateblue;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .blogComment p {
+    color: darkslateblue;
+    margin-bottom: 10px;
+  }
+  
+  .blogComment span {
+    color: #666; /* Adjusted color for timestamp */
+    font-size: 0.9rem;
+  }
+  

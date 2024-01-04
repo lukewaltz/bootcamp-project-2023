@@ -1,11 +1,11 @@
 import mongoose, { ObjectId } from "mongoose";
 import { Schema } from "mongoose";
 
-// type IComment = {
-//     user: string;
-//     comment: string;
-//     time: Date;
-// }
+export type IComment = {
+    user: string;
+    comment: string;
+    time: Date;
+}
 
 // typescript type (can also be an interface)
 export interface BlogData {
@@ -15,7 +15,7 @@ export interface BlogData {
     image: string;
     description: string; // for preview
     text: string; // for individual blog page
-    // comments: IComment[]; // array for comments
+    comments: IComment[]; // array for comments
 };
 
 
@@ -26,12 +26,12 @@ const blogSchema = new Schema<BlogData>({
     date: { type: Date, required: false, default: new Date()},
     image: { type: String, required: true },
     description: { type: String, required: true },
-    text: { type: String, required: true }
-    // comments: {
-    //   user: {type: String, required: true},
-    //   comment: {type: String, required: true},
-    //   time: {type: Date, required: false, default: new Date()
-    // }
+    text: { type: String, required: true },
+    comments: {
+      user: {type: String, required: true},
+      comment: {type: String, required: true},
+      time: {type: Date, required: false, default: new Date()}
+    }
 }
 )
 
