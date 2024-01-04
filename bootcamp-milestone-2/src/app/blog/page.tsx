@@ -13,7 +13,6 @@ async function getBlogs(){
 			// query for all blogs and sort by date
 	    const blogs = await BlogModel.find().lean().sort({ date: -1 }).orFail()
 			// send a response as the blogs as the message
-      console.log(blogs)
 	    return blogs
 	} catch (err) {
     console.error("error getting data from DB ", err);
@@ -22,20 +21,23 @@ async function getBlogs(){
 }
 
 export default async function BlogPost() {
-  const blogData = await getBlogs();
-  (blogData ? console.log(blogData[0]) : null);
+  const blogs = await getBlogs();
 
   return(
-
       <header className={style.blogPost}>
         <main>
-          {blogData ? (
-            blogData.map((blog) => (
-              <div key={blog._id}>
-                <Link href={"/blog/" + blog.slug}>
-                  <BlogComponent {...blog} />
+          {blogs ? (
+            blogs.map((blog, index) => (
+                <Link href={"/blog/" + blog.slug} key={index}>
+                  <BlogComponent   
+                    name={blog.name}
+                    slug={blog.slug}
+                    date={blog.date}
+                    image={blog.image}
+                    description={blog.description}
+                    text={blog.text}
+                  />
                 </Link>
-              </div>
             ))
           ) : (
             <p>Loading...</p>
