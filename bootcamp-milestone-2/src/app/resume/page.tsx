@@ -7,7 +7,7 @@ export default function Resume() {
       <title>Luke&apos;s Resume</title>
       <h1>My Resume</h1>
 
-      <a href="../images/Luke_s_Resume_10_09.pdf" download>
+      <a href="/Luke_s_Resume_11_6.pdf" download>
         <div className="button">Download</div>
       </a>
 
