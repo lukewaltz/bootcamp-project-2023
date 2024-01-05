@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <header className={style.footer} >
         <footer className="footer">
-            © 2023 Luke Waltz's Personal Website | All Rights Reserved
+            © 2023 Luke Waltz&apos;s Personal Website | All Rights Reserved
         </footer>
     </header>
   );
