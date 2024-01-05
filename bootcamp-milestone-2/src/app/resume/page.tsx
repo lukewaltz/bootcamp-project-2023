@@ -4,10 +4,10 @@ import style from "./resume.module.css"
 export default function Resume() {
   return (
     <header className={style.resume}>
-    <title>Luke's Resume</title>
+    <title>Luke&apos;s Resume</title>
       <h1>My Resume</h1>
       
-        <a href="../images/Luke_s_Resume_10_09.pdf" download><div className="button">Download Resume</div></a>
+        <a href="../images/Luke_s_Resume_10_09.pdf" download><div className="button">Download</div></a>
       
       <div>
         <section>
@@ -42,9 +42,9 @@ export default function Resume() {
               <ul className="openpark-list">
                 <li>Collaborated closely with the marketing team to design and develop
               user-friendly, mobile-responsive landing pages using Framer.com, HTML, and CSS,
-              enhancing OpenPark’s online presence and user engagement. </li>
+              enhancing OpenPark&apos;s online presence and user engagement. </li>
               <li>Integrated branded assets ensuring consistent alignment with
-              OpenPark’s branding guidelines; applied UX principles to ensure
+              OpenPark&apos;s branding guidelines; applied UX principles to ensure
               intuitive and engaging user navigation.</li>
               <li>Managed tasks from scoping, feedback collection,
               testing/validation, to final deployment on the OpenPark website,

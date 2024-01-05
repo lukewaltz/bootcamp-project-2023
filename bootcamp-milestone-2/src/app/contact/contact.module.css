@@ -3,7 +3,7 @@
 }
 
 .contact li{
-    list-style: disc;
+    list-style: None;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -29,12 +29,9 @@
 .contact div div div{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 200px;
-}
-
-.contact a img{
-    height: 50px;
+    justify-content: space-between;
+    align-content: space-between;
+    /* width: 200px; */
 }
 
 .contact form {

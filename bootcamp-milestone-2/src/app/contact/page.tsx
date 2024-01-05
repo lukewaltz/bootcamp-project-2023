@@ -101,7 +101,7 @@ export default function Contact() {
         </p>
         {/* Display error message when form is invalid */}
         {!isValid && (
-          <p style={{ color: "red" }}>All fields must be filled out properly.</p>
+          <p style={{ color: "red" }}>All fields must be filled.</p>
         )}
         {/* Display success message when email has been sent */}
         {sent && (
@@ -112,8 +112,8 @@ export default function Contact() {
         </div>
 
         <div className="mailto">
-          <h3 className="contact-header">Email</h3>
-          <ul className="mail-list">
+          {/* <h1 className="contact-header">Email</h1> */}
+          {/* <ul className="mail-list">
             <li>
               <a href="mailto:lukewaltz@outlook.com">Personal: lukewaltz@outlook.com</a>
             </li>
@@ -123,10 +123,10 @@ export default function Contact() {
             <li>
               <a href="mailto:luke@openpark.us">Work: luke@openpark.us</a>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="socials">
-          <h3 className="contact-header">Social Media</h3>
+          {/* <h3 className="contact-header">Social Media</h3> */}
           <div className="button-row">
             <div className="media-button">
               <a href="https://github.com/lukewaltz" className="media-link">

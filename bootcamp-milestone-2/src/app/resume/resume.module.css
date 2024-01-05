@@ -1,104 +1,118 @@
-.resume h1, .resume h2, .resume h3, .resume h4, .resume p, .resume li{
-    color: darkslateblue;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* resume.module.css */
+
+.resume h1,
+.resume h2,
+.resume h3,
+.resume h4,
+.resume p,
+.resume li {
+  color: darkslateblue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.resume h1{
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+.resume h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
-.resume h2{
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+.resume h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 15px 0;
 }
 
-.resume h3{
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+.resume h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-.resume ul{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.17em;
+.resume p {
+  font-style: italic;
+  margin: 5px 0;
+}
 
-    align-self: center;
+.resume ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.17em;
+  align-self: center;
+  padding-left: 0;
 }
 
 .resume li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin-left: 0;
 }
 
-.project{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.resume{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 40px, 40px;
+.resume {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 40px;
 }
 
-.entry-title{
-    margin-left: 10px;
+.entry-title {
+  margin-left: 10px;
+  font-weight: bold;
 }
 
-.entry-info{
-    font-style: italic;
-    margin-left: 20px;
+.entry-info {
+  font-style: italic;
+  margin-left: 20px;
 }
 
-.resume .skill-list{
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    list-style: none;
+.resume .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
-.resume div.button{
-    position: sticky;
-    background-color: darkslateblue;
-    padding: 5px, 7px;
-    border-radius: 8px;
-    width: 200px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+.resume .skill-list li {
+  margin: 5px;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
 
-.resume a{
-    color: lightblue;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.resume div.button {
+  background-color: darkslateblue;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  margin: 20px 10px;
+  cursor: pointer;
 }
 
-.resume div.button:hover{
-    width: 210px;
+.resume div.button:hover {
+  background-color: #4b0082; /* Darker shade on hover */
+}
+
+.resume a {
+  color: blue;
+  font-weight: bolder;
+  font-size: large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.resume a:hover {
+  text-decoration: underline;
 }
