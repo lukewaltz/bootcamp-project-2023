@@ -10,8 +10,27 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.resume .entry {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
+  border-radius: 8px; /* Adjust the border-radius as needed */
+  margin-bottom: 20px; /* Optional: You can adjust the margin-bottom */
+  text-align: left;
+  /* padding: 10px; */
+}
+
+.resume .entryInfo{
+  text-align: center;
+  font-style: italic;
+  font-size: large;
+}
+
+.resume .entryDescription{
+  /* padding: 10px; */
+  font-size: small;
+}
+
 .resume h1 {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
   margin: 20px 0;
 }
@@ -19,13 +38,14 @@
 .resume h2 {
   font-size: 1.5em;
   font-weight: bold;
-  margin: 15px 0;
+  margin: 15px;
 }
 
 .resume h3 {
   font-size: 1.17em;
   font-weight: bold;
   margin: 10px 0;
+  text-align: center;
 }
 
 .resume p {
@@ -39,12 +59,16 @@
   font-size: 1.17em;
   align-self: center;
   padding-left: 0;
+  border-radius: 8px; /* Adjust the border-radius as needed */
+  padding: 10px;
 }
 
 .resume li {
   display: list-item;
   text-align: -webkit-match-parent;
-  margin-left: 0;
+  margin-left: 15px;
+  list-style:disc;
+  text-align: left;
 }
 
 .project {
@@ -70,7 +94,7 @@
   font-weight: bold;
 }
 
-.entry-info {
+.resume .entry-info {
   font-style: italic;
   margin-left: 20px;
 }
@@ -84,7 +108,7 @@
 }
 
 .resume .skill-list li {
-  margin: 5px;
+  margin: 15px;
   padding: 8px;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -111,6 +135,10 @@
   font-size: large;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-decoration: none;
+}
+
+.resume section{
+  width: 85vw;
 }
 
 .resume a:hover {
