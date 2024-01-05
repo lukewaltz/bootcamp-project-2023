@@ -1,9 +1,7 @@
 import React from "react";
 import style from "./blogPost.module.css"; // Import the CSS module
-import Image from "next/image";
-import BlogComponent from "@/components/blogComponent";
 import Link from "next/link";
-import BlogModel, { BlogData } from "@/database/blogSchema";
+import BlogModel from "@/database/blogSchema";
 import connectDB from "@/helpers/db";
 import BlogPreview from "@/components/blogPreview";
 
@@ -46,5 +44,3 @@ export default async function BlogPost() {
     </header>
   );
 }
-
-// export default BlogPost;

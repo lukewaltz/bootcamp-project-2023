@@ -60,10 +60,16 @@ export default async function Home() {
           </div>
         </div>
         {blogData
-          ? blogData.map((blog) => (
-              <div key={blog._id}>
+          ? blogData.map((blog, index) => (
+              <div key={index}>
                 <Link href={"/blog/" + blog.slug}>
-                  <BlogPreview {...blog} />
+                  <BlogPreview
+                    name={blog.name}
+                    date={blog.date}
+                    description={blog.description}
+                    text={blog.text}
+                    slug={blog.slug}
+                  />
                 </Link>
               </div>
             ))

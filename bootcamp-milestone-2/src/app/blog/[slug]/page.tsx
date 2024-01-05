@@ -1,6 +1,4 @@
 import React from "react";
-import style from "../../../components/blogComponent.module.css";
-import Image from "next/image";
 import BlogComponent from "@/components/blogComponent";
 import Comment from "@/components/commentComponent";
 import { IComment } from "@/database/blogSchema";
