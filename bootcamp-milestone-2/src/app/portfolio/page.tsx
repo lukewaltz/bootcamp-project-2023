@@ -40,6 +40,7 @@ export default async function Portfolio() {
                     date={project.date}
                     image={project.image}
                     content={project.content}
+                    comments={project.comments}
                   />
                 </Link>
               </div>
