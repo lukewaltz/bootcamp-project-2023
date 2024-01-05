@@ -10,7 +10,7 @@ type Props = {
 
 async function getBlog(slug: string) {
       const res = await fetch(
-        `luke-waltz-personal-website.vercel.app/api/db/blog/${slug}`, 
+        `https://luke-waltz-personal-website.vercel.app/api/db/blog/${slug}`, 
         {
           cache: "no-store",	
         }
