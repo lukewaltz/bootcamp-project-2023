@@ -2,6 +2,7 @@ import React from "react";
 import ProjectComponent from "@/components/projectComponent";
 import Comment from "@/components/commentComponent";
 import { IComment } from "@/database/blogSchema";
+import CommentForm from "@/components/commentForm";
 
 type Props = {
   params: { slug: string };
@@ -42,6 +43,7 @@ export default async function Project({ params: { slug } }: Props) {
             <Comment key={index} comment={comment} />
           ))}
         </div>
+        <CommentForm path={"portfolio"} slug={slug} />
       </div>
     );
   } else {
