@@ -7,7 +7,7 @@ export default function Resume() {
       <title>Luke&apos;s Resume</title>
       <h1>My Resume</h1>
 
-      <a href="/Luke_s_Resume_11_6.pdf" download>
+      <a href="/Lukes_Resume_1_8_24.pdf" download>
         <div className="button">Download</div>
       </a>
 
@@ -246,22 +246,22 @@ export default function Resume() {
         <section className="section">
           <h2 className="section-title">Coursework</h2>
           <div className={style.entry}>
-          <p className={style.entryDescription}>
-            <ul className="course-list">
-              <li>Introduction to Object Oriented Programming</li>
-              <li>Data Structures</li>
-              <li>Introduction to Computing (Game Design)</li>
-              <li>Fundamentals of Computer Science</li>
-              <li>Digital Design</li>
-              <li>Computer Design and Assembly Language Programming</li>
-              <li>Calculus 4, 3, 2, 1</li>
-              <li>Linear Analysis</li>
-              <li>Physics 3, 1</li>
-              <li>Discrete Structures</li>
-              <li>Systems Programming</li>
-              <li>Design and Analysis of Algorithms</li>
-              <li>Introduction to Software Engineering</li>
-            </ul>
+            <p className={style.entryDescription}>
+              <ul className="course-list">
+                <li>Introduction to Object Oriented Programming</li>
+                <li>Data Structures</li>
+                <li>Introduction to Computing (Game Design)</li>
+                <li>Fundamentals of Computer Science</li>
+                <li>Digital Design</li>
+                <li>Computer Design and Assembly Language Programming</li>
+                <li>Calculus 4, 3, 2, 1</li>
+                <li>Linear Analysis</li>
+                <li>Physics 3, 1</li>
+                <li>Discrete Structures</li>
+                <li>Systems Programming</li>
+                <li>Design and Analysis of Algorithms</li>
+                <li>Introduction to Software Engineering</li>
+              </ul>
             </p>
           </div>
         </section>
