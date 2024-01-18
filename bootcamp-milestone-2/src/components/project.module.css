@@ -6,6 +6,19 @@
   border-radius: 8px;
   margin: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow for a lighter effect */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
 }
 
 .h3 {
@@ -16,9 +29,8 @@
 
 .image {
   border-radius: 8px;
-  max-width: 100%; /* Ensure images don't exceed their container width */
-  height: 300px;
-  width: 100%;
+  max-width: 30%; /* Ensure images don't exceed their container width */
+  /* width: 100%; */
   object-fit: cover;
   margin: 3vw;
 }
@@ -26,4 +38,23 @@
 .p {
   color: darkslateblue;
   line-height: 1.5; /* Improved line height for better readability */
+  font-size: larger;
+  padding: 50px;
 }
+
+.link {
+  margin-bottom: 50px;
+  border-radius: 50px;
+  width: 200px;
+  color: white;
+  text-align: center;
+  background-color: darkslateblue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: larger;
+}
+
+.link:hover {
+  background-color: #6b5b95; /* Darker color on hover for a subtle effect */
+}
+

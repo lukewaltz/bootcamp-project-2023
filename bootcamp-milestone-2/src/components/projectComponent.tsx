@@ -9,12 +9,12 @@ export default function ProjectComponent(props: ProjectData) {
   return (
 <div className={style.div}>
   <h3 className={style.h3}>{props.name} | {props.date}</h3>
-  <div>
-    <Image src={props.image} alt={props.name}  height={400} width={400} />
-    <Image src={props.image2} alt={props.name}  height={400} width={400} />
-    <p className={style.p}>{props.content}</p>
-    <Link href={props.repoLink} />
+  <div className={style.row}>
+    <Image src={props.image} alt={props.name} className={style.image} height={400} width={400} />
+    <Image src={props.image2} alt={props.name} className={style.image} height={400} width={400} />
   </div>
+    <p className={style.p}>{props.content}</p>
+    <Link href={props.repoLink}> <div className={style.link}> Go to Repo </div> </Link>
 </div>
   );
 }
