@@ -10,6 +10,8 @@ export interface ProjectData {
     image: string;
     content: string;
     comments: IComment[];
+    image2: string;
+    repoLink: string;
   }
 
 
@@ -24,7 +26,9 @@ const projectSchema = new Schema<ProjectData>({
       user: {type: String, required: true},
       comment: {type: String, required: true},
       time: {type: Date, required: false, default: new Date()}
-        }
+        },
+    image2: { type: String, required: false},
+    repoLink: { type: String, required: false }
     }
 )
 

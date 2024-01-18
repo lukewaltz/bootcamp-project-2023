@@ -41,6 +41,8 @@ export default async function Portfolio() {
                     image={project.image}
                     content={project.content}
                     comments={project.comments}
+                    image2={project.image2}
+                    repoLink={project.repoLink}
                   />
                 </Link>
               </div>

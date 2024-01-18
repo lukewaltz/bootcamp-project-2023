@@ -37,6 +37,8 @@ export default async function Project({ params: { slug } }: Props) {
           image={proj.image}
           content={proj.content}
           comments={proj.comments}
+          image2={proj.image2}
+          repoLink={proj.repoLink}
         />
         <div className="comments">
           {proj.comments.map((comment: IComment, index: number) => (
