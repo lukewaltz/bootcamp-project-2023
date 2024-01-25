@@ -11,7 +11,7 @@ async function getProjects() {
 
   try {
     // query for all blogs and sort by date
-    const projects = await Project.find().lean().orFail();
+    const projects = await Project.find().lean().sort({ date: -1 }).orFail();
     // send a response as the blogs as the message
     console.log(projects);
     return projects;
