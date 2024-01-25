@@ -9,7 +9,7 @@
   
   .h3 {
     color: darkslateblue;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   .div image {
@@ -19,15 +19,21 @@
   .p {
     color: darkslateblue;
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: darkslateblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   .div div{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: fit-content;
-    width: fit-content;
+    /* align-items: center; */
+    /* height: fit-content;
+    width: fit-content; */
+  }
+
+  .div:hover{
+    background-color: whitesmoke;
   }
   
