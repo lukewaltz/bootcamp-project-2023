@@ -6,7 +6,7 @@ import { IComment } from "./blogSchema";
 export interface ProjectData {
     name: string;
     slug: string; 
-    date: string;
+    date: Date;
     image: string;
     content: string;
     comments: IComment[];
@@ -19,7 +19,7 @@ export interface ProjectData {
 const projectSchema = new Schema<ProjectData>({
     name: { type: String, required: true },
     slug: { type: String, required: true },
-    date: { type: String, required: true},
+    date: { type: Date, required: false, default: new Date()},
     image: { type: String, required: true },
     content: { type: String, required: true },
     comments: {
