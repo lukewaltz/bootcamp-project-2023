@@ -20,13 +20,14 @@ export default function ProjectComponent(props: ProjectData) {
   return (
 <div className={style.div}>
   <h3 className={style.h3}>{props.name}</h3>
-  <span>{parseProjectTime(props.date)}</span>
+  <p className={style.date}><span>{parseProjectTime(props.date)}</span></p>
+  
   <div className={style.row}>
     <Image src={props.image} alt={props.name} className={style.image} height={400} width={400} />
     <Image src={props.image2} alt={props.name} className={style.image} height={400} width={400} />
   </div>
     <p className={style.p}>{props.content}</p>
-    <Link href={props.repoLink}> <div className={style.link}> Go to Repo </div> </Link>
+    <Link href={props.repoLink}> <div className={style.link}> View Project </div> </Link>
 </div>
   );
 }

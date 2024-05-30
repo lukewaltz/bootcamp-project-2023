@@ -37,6 +37,7 @@
 
 .p {
   color: darkslateblue;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5; /* Improved line height for better readability */
   font-size: larger;
   padding: 50px;
@@ -52,6 +53,12 @@
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: larger;
+}
+
+.date {
+  font-size: larger;
+  color: darkslateblue;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .link:hover {
